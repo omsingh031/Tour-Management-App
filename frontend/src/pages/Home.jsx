@@ -84,7 +84,7 @@ const Home = () => {
           <div className="row">
             <div className="left">
               <Subtitle subtitle="Experience" />
-              <h1>With our all experience we will serv you</h1>
+              <h1>With all our experience we will serve you</h1>
               <p>
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                 Obcaecati ullam inventore dolore architecto delectus non odio
