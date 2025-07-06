@@ -1,0 +1,96 @@
+/* src/components/ThemeToggle.css */
+.theme-toggle-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 60px;
+  height: 30px;
+  border: none;
+  border-radius: 25px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  cursor: pointer;
+  padding: 0;
+  outline: none;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.theme-toggle-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.toggle-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 25px;
+  overflow: hidden;
+}
+
+.toggle-circle {
+  position: absolute;
+  top: 3px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.toggle-circle.light {
+  left: 3px;
+  background: #fff;
+}
+
+.toggle-circle.dark {
+  left: 33px;
+  background: #2d3748;
+  color: white;
+}
+
+/* Dark mode styles */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #333333;
+  --card-bg: #f8f9fa;
+  --border-color: #e9ecef;
+}
+
+.dark {
+  --bg-color: #1a202c;
+  --text-color: #e2e8f0;
+  --card-bg: #2d3748;
+  --border-color: #4a5568;
+}
+
+/* Apply theme variables to body */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Example component styles that use theme variables */
+.card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.navbar {
+  background-color: var(--card-bg);
+  border-bottom: 1px solid var(--border-color);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Dark mode specific overrides */
+.dark .theme-toggle-btn {
+  background: linear-gradient(135deg, #4a5568 0%, #2d3748 100%);
+}
