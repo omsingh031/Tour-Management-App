@@ -40,4 +40,41 @@ A full-stack web application that simplifies travel bookings by allowing users t
 ---
 
 ## 📁 Project Structure
+/client → ReactJS frontend
+/server → NodeJS + Express backend
+/models → MongoDB schemas
+/routes → API route handlers
+/controllers → Business logic for routes
+/utils → JWT/Bcrypt utilities
+
+---
+
+## 🔐 Authentication & Security
+
+- Passwords are encrypted with **Bcrypt**
+- JWT tokens used for **user session management**
+- Protected routes and role-based access for **Users** and **Admins**
+
+---
+
+## 📦 Installation & Setup
+
+### Prerequisites:
+- Node.js, MongoDB, Git
+
+### Steps:
+```bash
+# Clone the repo
+git clone https://github.com/your-username/travel-agency-booking-system.git
+cd travel-agency-booking-system
+
+# Setup Backend
+cd server
+npm install
+npm run dev
+
+# Setup Frontend
+cd ../client
+npm install
+npm start
 
