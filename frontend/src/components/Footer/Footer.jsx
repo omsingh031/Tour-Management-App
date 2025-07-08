@@ -58,20 +58,8 @@ const Footer = () => {
           </div>
           
           <div className="social-links">
-            <button 
-              className="social-btn nstagram"
-              onClick={() => handleSocialClick('instagram')}
-              aria-label="Follow us on instagram"
-            >
-              <i className="fab fa-instagram"></i>
-            </button>
-            <button 
-              className="social-btn outube"
-              onClick={() => handleSocialClick('youtube')}
-              aria-label="Subscribe to our YouTube channel"
-            >
-              <i className="fab fa-youtube"></i>
-            </button>
+           
+            
             <button 
               className="social-btn github"
               onClick={() => handleSocialClick('github')}
@@ -86,7 +74,20 @@ const Footer = () => {
             >
               <i className="fab fa-linkedin"></i>
             </button>
-            
+             <button 
+              className="social-btn nstagram"
+              onClick={() => handleSocialClick('instagram')}
+              aria-label="Follow us on instagram"
+            >
+              <i className="fab fa-instagram"></i>
+            </button>
+            <button 
+              className="social-btn outube"
+              onClick={() => handleSocialClick('youtube')}
+              aria-label="Subscribe to our YouTube channel"
+            >
+              <i className="fab fa-youtube"></i>
+            </button>
             
           </div>
         </div>
@@ -151,7 +152,7 @@ const Footer = () => {
         <div className="footer-bottom-content">
           <p>&copy; {new Date().getFullYear()} TravelWorld. All rights reserved.</p>
           <p className="made-with-love">
-            Made with <span className="heart">☕</span>
+            Made with ❤️ driven by ☕
           </p>
         </div>
       </div>

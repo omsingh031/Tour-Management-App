@@ -29,10 +29,8 @@ const Home = () => {
               <span className="highlight">memories</span>
             </h1>
             <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi
-              rerum eos iure sed vel voluptatum ducimus in et quisquam possimus.
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia,
-              accusantium?
+              Welcome to <strong>Travel World</strong>, where your travel dreams turn into lifelong memories. Whether you're seeking serene escapes, thrilling adventures, cultural experiences, or luxurious getaways, we offer handpicked tour packages tailored to your desires. From the snowy peaks of the Himalayas to the sun-kissed beaches of Bali – let us craft the perfect journey for you.
+<strong>Plan. Travel. Discover. Repeat.</strong>
             </p>
           </div>
           <div className="right">
@@ -40,8 +38,9 @@ const Home = () => {
               <img src={heroImg} alt="" />
             </div>
             <div className="hero-img-box" style={{ marginTop: "80px" }}>
-              <video src={heroVideo} alt="" controls />
-            </div>
+  <video src={heroVideo} autoPlay muted loop playsInline />
+</div>
+
             <div className="hero-img-box" style={{ marginTop: "120px" }}>
               <img src={heroImg2} alt="" />
             </div>
@@ -86,9 +85,7 @@ const Home = () => {
               <Subtitle subtitle="Experience" />
               <h1>With all our experience we will serve you</h1>
               <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Obcaecati ullam inventore dolore architecto delectus non odio
-                vitae nostrum odit! Assumenda?
+                Our goal is to ensure every journey you take with us is smooth, safe, and unforgettable. From personalized itineraries to 24/7 support, we’re here to make your travel dreams come true.
               </p>
               <div className="expBtnWrap">
                 <div className="expbtn">

@@ -14,9 +14,7 @@ const NewsLetter = () => {
             <button>Subscribe</button>
           </span>
           <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis,
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis,
-            ipsa.
+            Stay updated with the latest travel tips, destination guides, exclusive offers, and seasonal deals. Join our community of explorers and make every journey better than the last!
           </p>
         </div>
         <div className="right">
