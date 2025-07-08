@@ -7,7 +7,7 @@ A full-stack web application that simplifies travel bookings by allowing users t
 
 ## 📸 Project Screenshot
 
-![App Screenshot](./Screenshots/homepage.png)
+![App Screenshot](./Screenshots/homepage.png.png)
 
 
 ---
