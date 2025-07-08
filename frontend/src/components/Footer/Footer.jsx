@@ -1,22 +1,43 @@
 import React from "react";
+import { useNavigate } from "react-router-dom"; // Add this import
 import "./footer.css";
 import logo from "../../assets/images/logo1.png";
 
 const Footer = () => {
+  const navigate = useNavigate(); // Add this hook
+
   const handleLinkClick = (e, section) => {
     e.preventDefault();
-    // Add your navigation logic here
-    console.log(`Navigate to ${section}`);
-    // Example: navigate(`/${section.toLowerCase()}`);
+    
+    // Define the routes for each section
+    const routes = {
+      'Home': '/',
+      'About': '/about',
+      'Tours': '/tours',
+      'Destinations': '/destinations',
+      'Gallery': '/gallery',
+      'Login': '/login',
+      'Register': '/register',
+      'Contact': '/contact'
+    };
+    
+    // Navigate to the corresponding route
+    if (routes[section]) {
+      navigate(routes[section]);
+    } else {
+      // Fallback for routes not defined
+      navigate(`/${section.toLowerCase()}`);
+    }
   };
 
   const handleSocialClick = (platform) => {
     // Add your social media links here
     const socialLinks = {
-      instagram: "https://instagram.com/yourpage",
-      youtube: "https://youtube.com/yourchannel", 
-      facebook: "https://facebook.com/yourpage",
-      pinterest: "https://pinterest.com/yourpage"
+      instagram: "https://instagram.com/omsingh031",
+      youtube: "https://youtube.com", 
+      github: "https://github.com/omsingh031",
+      linkedin: "https://linkedin.com/in/omsingh031"
+      
     };
     
     if (socialLinks[platform]) {
@@ -38,33 +59,35 @@ const Footer = () => {
           
           <div className="social-links">
             <button 
-              className="social-btn instagram"
+              className="social-btn nstagram"
               onClick={() => handleSocialClick('instagram')}
-              aria-label="Follow us on Instagram"
+              aria-label="Follow us on instagram"
             >
               <i className="fab fa-instagram"></i>
             </button>
             <button 
-              className="social-btn youtube"
+              className="social-btn outube"
               onClick={() => handleSocialClick('youtube')}
               aria-label="Subscribe to our YouTube channel"
             >
               <i className="fab fa-youtube"></i>
             </button>
             <button 
-              className="social-btn facebook"
-              onClick={() => handleSocialClick('facebook')}
-              aria-label="Like us on Facebook"
+              className="social-btn github"
+              onClick={() => handleSocialClick('github')}
+              aria-label="View our GitHub"
             >
-              <i className="fab fa-facebook"></i>
+              <i className="fab fa-github"></i>
             </button>
             <button 
-              className="social-btn pinterest"
-              onClick={() => handleSocialClick('pinterest')}
-              aria-label="Follow us on Pinterest"
+              className="social-btn linkedin"
+              onClick={() => handleSocialClick('linkedin')}
+              aria-label="Connect with us on LinkedIn"
             >
-              <i className="fab fa-pinterest"></i>
+              <i className="fab fa-linkedin"></i>
             </button>
+            
+            
           </div>
         </div>
 
@@ -74,17 +97,17 @@ const Footer = () => {
             <li><button onClick={(e) => handleLinkClick(e, 'Home')} className="footer-link">Home</button></li>
             <li><button onClick={(e) => handleLinkClick(e, 'About')} className="footer-link">About</button></li>
             <li><button onClick={(e) => handleLinkClick(e, 'Tours')} className="footer-link">Tours</button></li>
-            <li><button onClick={(e) => handleLinkClick(e, 'Destinations')} className="footer-link">Destinations</button></li>
+            <li><button onClick={(e) => handleLinkClick(e, 'Tours')} className="footer-link">Destinations</button></li>
           </ul>
         </div>
 
         <div className="footer-section">
           <h4>Quick Links</h4>
           <ul className="footer-links">
-            <li><button onClick={(e) => handleLinkClick(e, 'Gallery')} className="footer-link">Gallery</button></li>
+            <li><button onClick={(e) => handleLinkClick(e, 'tours')} className="footer-link">Gallery</button></li>
             <li><button onClick={(e) => handleLinkClick(e, 'Login')} className="footer-link">Login</button></li>
             <li><button onClick={(e) => handleLinkClick(e, 'Register')} className="footer-link">Register</button></li>
-            <li><button onClick={(e) => handleLinkClick(e, 'Contact')} className="footer-link">Contact</button></li>
+            <li><button onClick={(e) => handleLinkClick(e, 'About')} className="footer-link">Contact</button></li>
           </ul>
         </div>
 
@@ -97,7 +120,7 @@ const Footer = () => {
               </div>
               <div className="contact-text">
                 <span className="contact-label">Address</span>
-                <span>ABC Sector 12, India</span>
+                <span>Jamshedpur, India</span>
               </div>
             </div>
             
@@ -107,7 +130,7 @@ const Footer = () => {
               </div>
               <div className="contact-text">
                 <span className="contact-label">Email</span>
-                <a href="mailto:travelWorld@gmail.com" className="contact-link">travelWorld@gmail.com</a>
+                <a href="mailto:as120171.omkumar@gmail.com" className="contact-link">as120171.omkumar@gmail.com</a>
               </div>
             </div>
             
@@ -128,7 +151,7 @@ const Footer = () => {
         <div className="footer-bottom-content">
           <p>&copy; {new Date().getFullYear()} TravelWorld. All rights reserved.</p>
           <p className="made-with-love">
-            Made with <span className="heart">❤️</span> by <span className="author">Om Kumar Singh</span>
+            Made with <span className="heart">☕</span>
           </p>
         </div>
       </div>
